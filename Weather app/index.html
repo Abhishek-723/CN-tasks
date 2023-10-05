@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong|Poppins"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <h1 id="name" class="header">Weather App</h1>
+    <div id="weather-container">
+      <form
+        id="location-form"
+        class="cityForm"
+        onsubmit="getWeather();return false;"
+      >
+        <div class="inputBorder">
+          <input
+            type="text"
+            id="location-input"
+            placeholder="Enter a city"
+            class="cityInput"
+            required
+          />
+        </div>
+        <button type="submit" class="formButton">Get Weather</button>
+      </form>
+      <div id="errorMsg" class="none">
+        Oops!!! Please enter a valid city name
+      </div>
+      <div id="weather-data" class="none weatherData">
+        <h1 id="city-name">Chennai</h1>
+        <img src="./weather02-512.webp" alt="" class="weatherImg" />
+        <h1 id="actual-temp">13&deg;C</h1>
+        <p id="description">Broken Clouds</p>
+        <div class="extraInfo">
+          <div class="feels">
+            <p>Feels Like</p>
+            <div class="flex">
+              <i class="fa-solid fa-temperature-three-quarters"></i>
+              <p id="realFeel">12&deg;C</p>
+            </div>
+          </div>
+          <div class="humidity">
+            <p>Humidity</p>
+            <div class="flex">
+              <i class="fa-solid fa-droplet"></i>
+              <p id="humidity">80%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
