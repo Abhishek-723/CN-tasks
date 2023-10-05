@@ -33,6 +33,7 @@ async function getWeather(e) {
       if (weatherData.classList.contains("none")) {
         weatherData.classList.remove("none");
       }
+      document.getElementById("location-input").value = "";
       const temp = Math.floor(data.main.temp);
       const feel = Math.floor(data.main.feels_like);
       city.innerHTML = `${location}`;
