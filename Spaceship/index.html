@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pixel Invasion</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="essentials">
@@ -18,14 +22,24 @@
         <p id="timer">60</p>
         <p>s</p>
       </div>
-      <!-- <p>Time Remaining: <span id="timer">60s</span></p> -->
     </div>
     <canvas id="gameCanvas" width="400" height="400"> </canvas>
-    <div class="none resultText" id="result">
-      <p id="resultText">
-        Game Over!!! Congratulations you have obtained a maxScore of:
-      </p>
+    <div class="none" id="gameOverScreen">
+      <p id="gameOverText">Game Over!!!</p>
+      <div class="flex textCenter">
+        <p>Congratulations you have obtained a maxScore of:</p>
+        <p id="finalHighestScore" class="largeText">0</p>
+      </div>
     </div>
+
+    <audio
+      id="hitSound"
+      src="https://actions.google.com/sounds/v1/weapons/big_explosion_cut_off.ogg"
+    ></audio>
+    <audio
+      src="https://actions.google.com/sounds/v1/impacts/object_toss_and_smash.ogg"
+      id="groundSound"
+    ></audio>
 
     <script src="script.js"></script>
   </body>

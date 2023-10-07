@@ -1,5 +1,5 @@
-// const hitSound = document.getElementById("hitSound");
-// const groundSound = document.getElementById("groundSound");
+const hitSound = document.getElementById("hitSound");
+const groundSound = document.getElementById("groundSound");
 const player = document.getElementById("player");
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
@@ -9,18 +9,19 @@ const scoreElement = document.getElementById("score");
 const highestScoreElement = document.getElementById("highestScore");
 const playerWidth = 10;
 const playerHeight = 10;
-const boxWidth = 20; // Width of the falling red dots
-const boxHeight = 20; // Height of the falling red dots
-const boxSpeed = 2; // Speed of the falling red dots
-const spawnInterval = 2000; // Interval at which red dots are spawned
-const maxRedDots = 5; // Maximum number of red dots on the screen at a time
+const boxWidth = 20;
+const boxHeight = 20;
+const boxSpeed = 2;
+const spawnInterval = 2000;
+const maxRedDots = 5;
 const bulletSpeed = 5;
 const maxBullets = 5;
-const resultDiv = document.getElementById("result");
-const resultDisplay = document.getElementById("resultText");
+const resultDiv = document.getElementById("gameOverScreen");
+const resultDisplay = document.getElementById("gameOverText");
+const finalScore = document.getElementById("finalHighestScore");
 
-let playerX = canvas.width / 2 - 5; // Initial player position
-const playerY = canvas.height - 20; // Fixed player Y position
+let playerX = canvas.width / 2 - 5;
+const playerY = canvas.height - 20;
 
 let redDots = []; // Array to store red dots
 let bullets = []; // Array to store bullets
@@ -29,19 +30,29 @@ let highestScore = 0;
 let gameTimer;
 let redDotInterval;
 let maxScoreLogged = false;
+let startG = false;
 
 function startGame() {
+  if (startG === true) {
+    window.location.reload();
+    return;
+  }
+  if (startG === false) {
+    startG = true;
+    startButton.innerHTML = "Cancel Game";
+  }
   score = 0;
   scoreElement.textContent = score;
   timerElement.textContent = "60";
   if (!resultDiv.classList.contains("none")) {
     resultDiv.classList.add("none");
+    resultDiv.classList.remove("resultText");
   }
 
   clearInterval(gameTimer); // Clear any existing game timer
   clearInterval(redDotInterval); // Clear the red dot spawning interval
 
-  let seconds = 60;
+  let seconds = 10;
   console.log("started");
   gameTimer = setInterval(function () {
     timerElement.textContent = seconds;
@@ -50,10 +61,14 @@ function startGame() {
     if (seconds < 0) {
       if (resultDiv.classList.contains("none")) {
         resultDiv.classList.remove("none");
+        resultDiv.classList.add("resultText");
       }
-      resultDisplay.innerHTML = `Game Over!!! Congratulations you have obtained a maxScore of:${highestScore}`;
+      resultDisplay.innerHTML = `Game Over!!!`;
+      finalScore.textContent = highestScore;
       clearInterval(gameTimer);
       timerElement.textContent = "Time's up!";
+      startG = false;
+      startButton.innerHTML = "Start Game";
       stopGame(); // Stop the game when the timer reaches 0
     }
   }, 1000);
@@ -109,6 +124,8 @@ function updateRedDots() {
         bullets[j].y <= redDots[i].y + boxHeight
       ) {
         // Bullet hit the red dot
+        hitSound.currentTime = 0; // Reset the audio to the beginning
+        hitSound.play();
         redDots.splice(i, 1);
         i--;
 
@@ -141,6 +158,8 @@ function updateRedDots() {
       i--;
 
       // Decrement the score by 5 with a minimum value of 0
+      groundSound.currentTime = 0; // Reset the audio to the beginning
+      groundSound.play();
       score = Math.max(0, score - 5);
       scoreElement.textContent = score;
     }
@@ -159,7 +178,7 @@ function shoot() {
 // Function to stop the game
 function stopGame() {
   clearInterval(gameTimer);
-  clearInterval(redDotInterval); // Clear the red dot spawning interval
+  clearInterval(redDotInterval);
   if (!maxScoreLogged) {
     maxScoreLogged = true;
     console.log("Max Score: " + highestScore);
@@ -175,15 +194,12 @@ window.addEventListener("keydown", function (event) {
 
 window.addEventListener("keydown", function (event) {
   if (event.key === "ArrowLeft") {
-    // Move the player to the left, but ensure it stays within the canvas
     playerX = Math.max(0, playerX - 5);
   } else if (event.key === "ArrowRight") {
-    // Move the player to the right, but ensure it stays within the canvas
     playerX = Math.min(canvas.width - playerWidth, playerX + 5);
   }
 });
 
-// Main game loop
 function gameLoop() {
   drawPlayer();
   updateBullets();
@@ -191,6 +207,4 @@ function gameLoop() {
   requestAnimationFrame(gameLoop);
 }
 
-// Start the game loop
 gameLoop();
-// </script>
