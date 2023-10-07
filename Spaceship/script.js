@@ -52,7 +52,7 @@ function startGame() {
   clearInterval(gameTimer); // Clear any existing game timer
   clearInterval(redDotInterval); // Clear the red dot spawning interval
 
-  let seconds = 10;
+  let seconds = 60;
   console.log("started");
   gameTimer = setInterval(function () {
     timerElement.textContent = seconds;
