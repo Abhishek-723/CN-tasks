@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="https://kit.fontawesome.com/860e7596f3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong|Poppins"
+    />
+  </head>
+
+  <body>
+    <div class="audio-container">
+      <h1><b>Ninja Music Player</b></h1>
+
+      <div class="audio-img-wrapper">
+        <div class="audio-img">
+          <img src="./Images/alec.jpg" alt="" class="img" id="audio-img" />
+        </div>
+
+        <h2 class="audio-title" id="audio-title">Let me down slowly</h2>
+        <h6 class="audio-singer" id="audio-singer">Alec Benjamin</h6>
+      </div>
+
+      <div class="audio-progress">
+        <div class="progress" id="progress-container">
+          <div class="progress-bar" id="progress-bar"></div>
+          <div class="progress-head" id="progress-head"></div>
+        </div>
+        <div class="time">
+          <div class="current-time" id="currentTime">00:00</div>
+          <div class="duration" id="totalTime">00:00</div>
+        </div>
+      </div>
+
+      <div class="audio-btns">
+        <button class="btn skip-back" id="playPrev">
+          <i class="fa-solid fa-backward-step"></i>
+        </button>
+
+        <button class="btn play">
+          <span id="playSong"> <i class="fa-solid fa-play"></i> </span>
+        </button>
+
+        <button class="btn skip-forward" id="playNext">
+          <i class="fa-solid fa-forward-step"></i>
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

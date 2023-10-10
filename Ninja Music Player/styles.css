@@ -1,0 +1,103 @@
+/* Write your desired css */
+
+body {
+  background-color: rgb(17, 16, 16);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+.audio-container {
+  width: 80%;
+  margin: 0 10%;
+}
+
+.img {
+  height: 400px;
+  width: 400px;
+  border-radius: 100%;
+  padding: 4px;
+  border: 1px solid gray;
+}
+
+.progress {
+  width: 400px;
+  margin-bottom: 0.8rem;
+  text-align: center;
+  background-color: rgb(166, 164, 164);
+  height: 12px;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  margin: auto;
+}
+
+.progress-head {
+  position: absolute;
+  background-color: #fafafa;
+  height: 1rem;
+  width: 1rem;
+  top: 0;
+  left: 0;
+  transform: translate(-30%, -10%);
+  border-radius: 100%;
+  z-index: 2;
+  /* box-shadow: 0 0 0 3px #aaabf8; */
+}
+
+.progress-bar {
+  background-color: #fff;
+  height: 100%;
+  position: relative;
+  width: 0%;
+  border-radius: 0.8rem;
+}
+.current-time {
+  text-align: left;
+  margin-left: 0.5rem;
+  font-size: small;
+  color: rgb(202, 198, 198);
+}
+
+.duration {
+  text-align: end;
+  margin-right: 0.5rem;
+  font-size: small;
+  color: rgb(202, 198, 198);
+}
+
+.time {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  margin: auto;
+  /* font-size: 12px; */
+}
+
+.btn {
+  font-size: 22px;
+  padding: 14px 20px;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .img {
+    height: 300px;
+    width: 300px;
+    /* border-radius: 100%;
+    padding: 4px;
+    border: 1px solid gray; */
+  }
+  .time {
+    width: 300px;
+  }
+  .progress {
+    width: 300px;
+  }
+}
+@media (max-width: 450px) {
+  .audio-container {
+    width: 100%;
+    margin: 0;
+  }
+}
