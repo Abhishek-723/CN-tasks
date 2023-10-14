@@ -1,0 +1,90 @@
+body {
+  background-color: #4b4949;
+}
+
+.container {
+  width: 30%;
+  height: max-content;
+  background-color: azure;
+  margin: auto;
+  text-align: center;
+}
+.hangman-container {
+  background-color: black;
+  width: 200px;
+  height: 300px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+}
+.hangman {
+  margin-top: 30px;
+}
+.head {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ff3333;
+  top: 0;
+  left: 30px;
+}
+.body {
+  height: 100px;
+  width: 10px;
+  background-color: #ff3333;
+  transform: translateX(25px);
+}
+
+.left-arm,
+.right-arm {
+  width: 70px;
+  height: 10px;
+  background-color: #ff3333;
+  top: 80px;
+}
+
+.left-arm {
+  transform: translate(15px, -90px) rotate(45deg);
+  /* transform: translate(-100px, 20px); */
+  left: 0;
+}
+
+.right-arm {
+  transform: translate(-20px, -100px) rotate(-45deg);
+  right: 0;
+}
+
+.left-leg,
+.right-leg {
+  width: 70px;
+  height: 10px;
+  background-color: #ff3333;
+  top: 145px;
+}
+
+.left-leg {
+  transform: rotate(-45deg) translate(-16px, -30px);
+  left: 0;
+}
+
+.right-leg {
+  transform: rotate(45deg) translate(0px, -24px);
+  right: 0;
+}
+
+.word-display {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.guesses {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  margin-bottom: 30px;
+}
+.none {
+  display: none;
+}
