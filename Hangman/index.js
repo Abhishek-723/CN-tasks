@@ -29,10 +29,14 @@ console.log(childNodes);
 
 function setWinBackgroundColor() {
   document.body.style.backgroundColor = "green";
+  guessInput.setAttribute("disabled", "");
+  guessButton.setAttribute("disabled", "");
 }
 
 function setLossBackgroundColor() {
   document.body.style.backgroundColor = "red";
+  guessInput.setAttribute("disabled", "");
+  guessButton.setAttribute("disabled", "");
 }
 
 function updateWordDisplay() {
@@ -48,7 +52,8 @@ function updateWordDisplay() {
 }
 
 function checkWin() {
-  if (wordDisplay.textContent === selectedWord) {
+  let originalWord = wordDisplay.textContent.replace(/ /g, "");
+  if (originalWord === selectedWord) {
     wordDisplay.textContent = "Congratulations! You won!";
     setWinBackgroundColor();
   }
@@ -76,11 +81,18 @@ function guessLetter() {
       updateWordDisplay();
       checkWin();
       checkLoss();
-      //   hasGuessedLetter = true;
     }
+  } else {
+    alert("Please guess only one letter at a time");
   }
   guessInput.value = ""; // Clear the input field
 }
+
+guessInput.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    guessButton.click();
+  }
+});
 
 // Initialize the game
 updateWordDisplay();

@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-  width: 30%;
+  width: 360px;
   height: max-content;
   background-color: azure;
   margin: auto;
