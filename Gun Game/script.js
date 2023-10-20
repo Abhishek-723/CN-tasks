@@ -88,7 +88,7 @@ function drawMonster() {
 }
 
 document.addEventListener("keydown", (event) => {
-  //   console.log(event.key);
+  console.log(event.key);
   if (event.key === "ArrowLeft" && gunX - 10 >= 0) {
     gunX -= 10;
     drawGun();
@@ -107,6 +107,12 @@ document.addEventListener("keydown", (event) => {
     bullets.push({ x: bulletX, y: bulletY });
     drawBullets();
     bulletSound.play();
+  } else if (event.key === "Enter" && !gameStarted) {
+    monsterDirection = 1;
+    canvas.style.backgroundColor = "black";
+    monsterX = canvasWidth / 2 - monsterImg.width / 2;
+    gameStarted = true;
+    update();
   }
 });
 
