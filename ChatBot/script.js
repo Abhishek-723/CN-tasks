@@ -59,7 +59,7 @@ function sendMessage() {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      messages: [{ role: "user", content: "Hello" }],
+      messages: [{ role: "user", content: message }],
       max_tokens: 50, // Adjust the number of tokens as needed
     }),
   })
