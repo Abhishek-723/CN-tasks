@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+.controls button,
+.choose-img {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.controls .reset-filter {
+  background-color: rgb(103, 103, 235);
+}
+
+.container {
+  width: 80%;
+  height: 600px;
+  margin: 40px auto;
+  /* text-align: center; */
+  padding: 10px 20px;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  border-radius: 12px;
+  background-color: rgb(224, 222, 222);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.editor-panel {
+  min-width: 50%;
+}
+.filter .options {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  justify-content: space-evenly;
+  text-align: center;
+  margin-right: 30px;
+}
+
+.filter .options button {
+  padding: 16px 24px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(103, 103, 235);
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}
+
+.rotate {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.rotate .options {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  justify-content: space-evenly;
+}
+
+.rotate button {
+  margin-top: 10px;
+  padding: 10px 0;
+  font-size: 18px;
+}
+
+.preview-img img {
+  width: 400px;
+  height: 300px;
+  margin: 40px 100px 0 0;
+}
+
+.controls {
+  display: flex;
+  width: 90%;
+  margin: 30px auto;
+  justify-content: space-between;
+}
