@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ninja's Chatbot</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <button class="chatbot-toggler" onclick="toggleIcons()">
+      <i class="fa-solid fa-message"></i>
+      <i class="fa-solid fa-xmark" style="display: none"></i>
+    </button>
+    <div class="chatbot" id="chatbot" style="display: none">
+      <header>
+        <h2>Ninja's Chatbot</h2>
+        <i class="fa-solid fa-xmark" onclick="toggleIcons()"></i>
+      </header>
+      <ul class="chatbox" id="chatList">
+        <li class="chat incoming">
+          <span class="material-symbols-outlined">N</span>
+          <p>Hi, how may I assist you.</p>
+        </li>
+        <li class="chat outgoing">
+          <p>Chat display.</p>
+        </li>
+      </ul>
+      <div class="chat-input">
+        <textarea
+          placeholder="Enter a message"
+          spellcheck="false"
+          id="messageTextarea"
+          required
+        ></textarea>
+        <i class="fa-solid fa-paper-plane" onclick="sendMessage()"></i>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
