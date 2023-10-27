@@ -1,0 +1,77 @@
+.nav-container {
+  width: 90%;
+  padding: 0 5%;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+}
+
+.nav-container button {
+  padding: 10px 5px;
+  cursor: pointer;
+}
+
+.nav-container button:hover {
+  background-color: rgb(56, 56, 136);
+  color: white;
+}
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #0000001c;
+}
+
+.all_songs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 96vh;
+  padding-top: 20px;
+  max-width: 400px;
+  min-width: 300px;
+  background-color: white;
+  color: #000;
+  overflow-y: scroll;
+  /* transform: translateX(400px); */
+  /* overflow: hidden; */
+  /* font-size: 18px; */
+}
+.all_songs h3 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.library-song-container {
+  display: flex;
+  width: 94%;
+  padding: 2% 3%;
+  display: flex;
+  /* justify-content: space-betwe; */
+  align-items: center;
+}
+
+.library-song-container:hover {
+  background-color: rgb(218, 215, 215);
+  cursor: pointer;
+}
+
+.cover-image img {
+  width: 80px;
+  height: 100px;
+  border-radius: 6px;
+}
+
+.song-info {
+  margin-left: 10px;
+}
+
+.active {
+  background-color: rgb(218, 215, 215);
+}
