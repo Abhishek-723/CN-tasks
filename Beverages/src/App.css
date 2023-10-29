@@ -1,0 +1,115 @@
+.navbar {
+  width: 90%;
+  padding: 2% 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.navbar .logo {
+  font-size: 22px;
+}
+
+.navbar .nav-elements {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  font-size: 16px;
+}
+
+.navbar .nav-links {
+  text-decoration: none;
+  color: #000;
+  margin: 0 20px;
+  padding: 6px 16px;
+  border-radius: 6px;
+}
+
+.navbar .nav-links:hover {
+  background-color: rgb(213, 212, 212);
+}
+
+.search-form {
+  text-align: center;
+}
+
+.search-form p {
+  font-size: 28px;
+}
+
+.search-form input {
+  width: 400px;
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+
+.cocktails-center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cocktail {
+  max-width: 300px;
+  margin: 30px auto;
+  background-color: rgb(212, 209, 209);
+  /* margin: 30px; */
+}
+
+.cocktail .details {
+  padding: 18px;
+}
+
+.cocktail .details button {
+  padding: 5px 8px;
+  border: none;
+  /* color: rgb(212, 230, 165); */
+}
+.cocktail .details button:hover {
+  cursor: pointer;
+  background-color: rgb(212, 230, 165);
+}
+
+.cocktail img {
+  width: 300px;
+  height: 240px;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.btn-primary {
+  width: 120px;
+  padding: 5px 8px;
+  border: none;
+  margin: 20px auto;
+  display: block;
+  background-color: rgb(187, 184, 184);
+  border-radius: 4px;
+}
+
+.btn-primary:hover {
+  cursor: pointer;
+  background-color: rgb(212, 230, 165);
+}
+
+.about-section {
+  width: 80%;
+  padding: 0 10%;
+  text-align: center;
+}
+
+@media (max-width: 1270px) {
+  .cocktails-center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .cocktails-center {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
