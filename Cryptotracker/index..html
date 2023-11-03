@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cryptocurrency Price Checker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    />
+  </head>
+  <body>
+    <div class="crypto-tracker">
+      <h1>Cryptocurrency Price Checker</h1>
+      <select id="crypto-select">
+        <option value="">Select a cryptocurrency</option>
+      </select>
+      <p>Selected cryptocurrency price: <span id="crypto-price"></span></p>
+      <label for="alert-price">Set Price Threshold:</label>
+      <input type="number" id="alert-price" value="0" />
+      <p id="alert-message" style="color: red"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
