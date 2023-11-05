@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Quiz Application</title>
+  </head>
+  <body>
+    <div class="quiz-container">
+      <div class="instruction-modal" id="instructionModal">
+        <h1>Quiz Instructions</h1>
+        <p>1. Total time provided to the quiz is 20 secs</p>
+        <p>
+          2. There are unlimited questions with each correct answer providing 10
+          points
+        </p>
+        <button id="startQuiz">Start</button>
+      </div>
+      <div class="quiz-modal" id="quizModal">
+        <p id="timer"></p>
+        <h1>Quiz Application</h1>
+        <p>Score: <span id="score">0</span></p>
+        <div id="question"></div>
+        <div id="options"></div>
+      </div>
+      <div class="result-modal" id="resultModal">
+        <h1>Quiz Over!</h1>
+        <p>Your Score: <span id="finalScore">0</span></p>
+        <p id="congratsMessage"></p>
+        <button id="playAgain">Play Again</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
