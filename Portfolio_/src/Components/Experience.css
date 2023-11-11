@@ -1,0 +1,46 @@
+/* Your existing CSS styles */
+
+.experience {
+  background-color: #f7f7f7;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.achievement {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.circle {
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  transition: transform 0.3s;
+}
+
+.circle p {
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
+
+/* Add responsive design for smaller screens */
+@media (max-width: 768px) {
+  .achievement {
+    flex-direction: column;
+  }
+
+  .circle {
+    max-width: 80%;
+  }
+}

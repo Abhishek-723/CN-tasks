@@ -1,0 +1,76 @@
+/* Your existing CSS styles */
+
+.services {
+  background-color: #f7f7f7;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.awesome {
+  margin-bottom: 20px;
+}
+
+.awesome h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+.awesome p {
+  font-size: 16px;
+  color: #555;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  margin: 10px; /* Add margin between cards */
+  max-width: 300px; /* Set a maximum width for the cards */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  max-width: 80px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin: 20px 0;
+  color: #333;
+}
+
+.card p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Add responsive design for smaller screens */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    flex: 1;
+    max-width: 80%;
+    margin: 10px 0;
+  }
+}

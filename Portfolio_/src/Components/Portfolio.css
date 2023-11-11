@@ -1,0 +1,62 @@
+/* CSS for the Slider */
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+  background: #f7f7f7; /* Set a background color for the container */
+  text-align: center;
+}
+
+.slider {
+  display: flex;
+  width: 300%; /* Three slides, each occupying 100% width */
+  animation: slide 10s infinite linear; /* Adjust animation duration as needed */
+}
+
+.slide {
+  flex: 1;
+  min-width: 100%;
+  padding: 40px 20px; /* Increase padding for better spacing */
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.slide1 {
+  background: #007bff;
+}
+
+.slide2 {
+  background: #00aaff;
+}
+
+.slide3 {
+  background: #0056b3;
+}
+
+/* CSS Animation for Sliding */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-100%);
+  }
+  66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .slider {
+    width: 400%; /* Four slides, each occupying 100% width */
+  }
+
+  .slide {
+    padding: 40px 10px;
+  }
+}

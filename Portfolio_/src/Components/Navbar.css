@@ -1,0 +1,95 @@
+/* Reset some default styles */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the navbar */
+.n-wrapper {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.n-left {
+  display: flex;
+  align-items: center;
+}
+
+.n-name {
+  font-size: 24px;
+  color: #fff;
+  margin-right: 20px;
+}
+
+.n-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.n-list li {
+  margin-right: 20px;
+}
+
+.n-list a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.n-hamburger {
+  display: none;
+}
+
+/* Add responsive design for small screens */
+/* @media (max-width: 768px) {
+  .n-right {
+    display: block; /* Show the right side on small screens */
+
+/* Your existing styles here */
+
+/* Add responsive design for small screens */
+@media (max-width: 768px) {
+  .n-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .n-list {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #333;
+    flex-direction: column;
+    border-radius: 5px;
+  }
+
+  .n-list.active {
+    display: flex;
+    flex-direction: column;
+    animation: slideDown 0.5s forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .n-hamburger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+  }
+}
