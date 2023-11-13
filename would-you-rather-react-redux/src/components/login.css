@@ -1,0 +1,28 @@
+/* Add your CSS styles here */
+.columns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.card-image img {
+  border-radius: 50%;
+}
+
+.select {
+  width: 100%;
+}
+
+/* Add more styles as needed */
